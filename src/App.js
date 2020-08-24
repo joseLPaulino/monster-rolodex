@@ -12,6 +12,9 @@ class App extends Component {
     };
   }
 
+  //Note => fucntions automatically binds this to the context of where they are
+  //defined. otherwise the bind must be explicetely done,.
+  //i.e
   handleChange = (e) => this.setState({ searchField: e.target.value });
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
